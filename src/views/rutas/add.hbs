@@ -1,0 +1,37 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/rutas/addruta" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="salida" class="form-control" placeholder="Salida" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="destino" class="form-control" placeholder="Destino">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="precio" class="form-control" placeholder="Precio">
+                        </div>
+                        <div class="form-group">
+                        <p>Hora: <input type="time" name="hora"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="chofer" class="form-control" placeholder="CI: 1er Chofer">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="chofer2" class="form-control" placeholder="CI: 2do Chofer">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar nueva Ruta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

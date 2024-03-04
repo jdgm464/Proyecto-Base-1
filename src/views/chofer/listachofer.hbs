@@ -1,0 +1,41 @@
+<div class="container p-4">
+    <div class="row">
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID Chofer</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Sexo</th>
+       <th scope="col">Edad</th>
+      <th scope="col">Modificar</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each chofer}}
+    <tr>
+      <td>{{ci_chofer}}</td>
+      <td>{{nombre}}</td>
+      <td>{{apellido}}</td>
+       <td>{{edad}}</td>
+      <td>{{sexo}}</td>
+      <td>
+      <a href="/chofer/delete/{{ci_chofer}}" class="btn btn-danger">ELIMINAR</a>
+      <a href="/chofer/edit_chofer/{{ci_chofer}}" class="btn btn-success">ACTUALIZAR</a>
+      </td>
+    </tr>
+    {{else}}
+         <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay choferes registrados aún</p>
+                <a href="/chofer/addchofer">Registrar Nuevo Chofer</a>
+            </div>
+            <br>
+        </div>
+    {{/each}}
+     </tbody>
+</table>
+</div>
+</div>

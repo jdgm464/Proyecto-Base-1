@@ -1,0 +1,45 @@
+<div class="container p-4">
+    <div class="row">
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID Ruta</th>
+      <th scope="col">Salida</th>
+      <th scope="col">Destino</th>
+      <th scope="col">Precio</th>
+       <th scope="col">Hora</th>
+      <th scope="col">1.- Chofer</th>
+      <th scope="col">2.- Chofer</th>
+      <th scope="col">Modificar</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each rutas}}
+    <tr>
+      <td>{{idruta}}</td>
+      <td>{{salida}}</td>
+      <td>{{destino}}</td>
+      <td>{{precio}}</td>
+      <td>{{hora}}</td>
+      <td>{{chofer}}</td>
+      <td>{{chofer2}}</td>
+      <td>
+      <a href="/rutas/delete/{{idruta}}" class="btn btn-danger">ELIMINAR</a>
+      <a href="/rutas/edit_ruta/{{idruta}}" class="btn btn-success">ACTUALIZAR</a>
+      </td>
+    </tr>
+    {{else}}
+         <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay rutas creadas aún</p>
+                <a href="/rutas/addruta">Crea una nueva Ruta</a>
+                <td>
+            </div>
+        </div>
+        </td>
+    {{/each}}
+</table>
+</div>
+</div>

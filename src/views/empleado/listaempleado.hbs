@@ -1,0 +1,40 @@
+<div class="container p-4">
+    <div class="row">
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID Empleado</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Sexo</th>
+       <th scope="col">Edad</th>
+      <th scope="col">Modificar</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each empleado}}
+    <tr>
+      <td>{{ci_empleado}}</td>
+      <td>{{nombre}}</td>
+      <td>{{apellido}}</td>
+      <td>{{sexo}}</td>
+      <td>
+      <a href="/empleado/delete/{{ci_empleado}}" class="btn btn-danger">ELIMINAR</a>
+      <a href="/empleado/edit_empleado/{{ci_empleado}}" class="btn btn-success">ACTUALIZAR</a>
+      </td>
+    </tr>
+    {{else}}
+         <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay choferes registrados aún</p>
+                <a href="/empleado/addempleado">Registrar Nuevo Empleado</a>
+            </div>
+            <br>
+        </div>
+    {{/each}}
+     </tbody>
+</table>
+</div>
+</div>

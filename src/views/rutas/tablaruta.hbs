@@ -1,0 +1,27 @@
+<center><h1>Registro DATA de Rutas</h1></center>
+<div class="container p-4">
+    <div class="row">
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Salida</th>
+      <th scope="col">Destino</th>
+      <th scope="col">Precio</th>
+       <th scope="col">Hora</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each rutas}}
+    <tr>
+      <td>{{salida}}</td>
+      <td>{{destino}}</td>
+      <td>{{precio}}</td>
+      <td>{{hora}}</td>
+    </tr>
+    {{/each}}
+     </tbody>
+</table>
+</div>
+</div>

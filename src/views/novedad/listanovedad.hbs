@@ -1,0 +1,38 @@
+<div class="container p-4">
+    <div class="row">
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID Novedad</th>
+      <th scope="col">ID Ruta</th>
+      <th scope="col">Novedad</th>
+      <th scope="col">Modificar</th>
+      <th scope="col">Hora</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each novedad}}
+    <tr>
+      <td>{{idnovedad}}</td>
+      <td>{{id_ruta}}</td>
+      <td>{{novedad}}</td>
+      <td>{{hora}}</td>
+      <td>
+      <a href="/novedades/delete/{{idnovedad}}" class="btn btn-danger">ELIMINAR</a>
+      <a href="/novedades/edit_novedad/{{idnovedad}}" class="btn btn-success">ACTUALIZAR</a>
+      </td>
+    </tr>
+    {{else}}
+         <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay novedades creadas aún</p>
+                <a href="/novedades/addnovedad">Crea una nueva Novedad</a>
+                <td>
+            </div>
+        </div>
+        </td>
+    {{/each}}
+</table>
+</div>
+</div>

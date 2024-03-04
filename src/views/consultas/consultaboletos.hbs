@@ -1,0 +1,46 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each boleto}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                   <a target="_blank">
+                        <h3 class="card-title text-uppercase">
+                          <p>ID Boleto  {{idboleto}}</p>
+                        </h3>
+                        <h5 class="card-title text-uppercase">
+                            <p>CI:  {{ci_cliente}}</p>
+                        </h5>
+                        <h5 class="card-title text-uppercase">
+                            <p>ID Ruta:  {{id_ruta}}</p>
+                        </h5>
+                        <h5 class="card-title text-uppercase">
+                            <p>Precio $:  {{precio}}</p>
+                        </h5>
+                        <h5 class="card-title text-uppercase">
+                            <p>Precio Bs:  {{precio_bolivares}}</p>
+                        </h5>
+                        <h5 class="card-title text-uppercase">
+                            <p>Puesto Asignado:  {{puesto_asignado}}</p>
+                        </h5>
+                        <h5 class="card-title text-uppercase">
+                            <p>Nr Flota:  {{numero_unidad}}</p>
+                        </h5>
+                        <h5 class="card-title text-uppercase">
+                            <p>Metodo de Pago:  {{metodo_pago}}</p>
+                        </h5>
+                    </a>
+                    <p class="m-2">{{description}}</p>                      
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay boletos registrados realice una compra</p>
+                <a href="/signup">Compre!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

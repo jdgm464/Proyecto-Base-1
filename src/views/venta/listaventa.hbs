@@ -1,0 +1,65 @@
+<div class="container p-4">
+    <div class="row">
+<table class="table table-bordered">
+  <thead class="thead-dark">
+   
+    <tr>
+      <th scope="col">ID Venta</th>
+      <th scope="col">CI Cliente</th>
+      <th scope="col">CI Empleado</th>
+      <th scope="col">ID Ruta</th>
+      <th scope="col">Fecha Salida</th>
+      <th scope="col">Fecha Venta</th>
+      <th scope="col">Tasa Salida</th>
+      <th scope="col">IVA Dolares</th>
+      <th scope="col">Puesto Asignado</th>
+      <th scope="col">Numero de Unidad</th>
+      <th scope="col">Metodo de Pago</th>
+      <th scope="col">Tasa Salida Bs</th>
+      <th scope="col">IVA Bolivares</th>
+      <th scope="col">Nr Recibo</th>
+      <th scope="col">Nr Vaucher</th>
+      <th scope="col">Entidad Bancaria</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Precio Bolivares</th>
+      <th scope="col">Moneda</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each venta}}
+    <tr>
+      <td>{{idventa}}</td>
+      <td>{{ci_cliente}}</td>
+      <td>{{ci_empleado}}</td>
+      <td>{{id_ruta}}</td>
+      <td>{{fecha_salida}}</td>
+      <td>{{fecha_venta}}</td>
+      <td>{{tasa_salida}}</td>
+      <td>{{iva}}</td>
+      <td>{{puesto_asignado}}</td>
+      <td>{{numero_unidad}}</td>
+      <td>{{metodo_pago}}</td>
+      <td>{{tasa_salidabf}}</td>
+      <td>{{iva_bolivares}}</td>
+      <td>{{nr_recibo}}</td>
+      <td>{{nr_vaucher}}</td>
+      <td>{{entidad_bancaria}}</td>
+      <td>{{precio}}</td>
+      <td>{{precio_bolivares}}</td>
+      <td>{{moneda}}</td>
+    </tr>
+    {{else}}
+         <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay ventas registradas </p>
+                <a href="/profile">Crea una nueva Venta</a>
+                <td>
+            </div>
+            <br>
+        </div>
+        </td>
+    {{/each}}
+</table>
+</div>
+</div>

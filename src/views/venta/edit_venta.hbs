@@ -1,0 +1,28 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/venta/edit_venta/{{venta.idventa}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="ci_cliente" value= "{{venta.ci_cliente}}" class="form-control" placeholder="Ci Cliente">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="ci_empleado"  value= "{{venta.ci_empleado}}" class="form-control" placeholder="Ci Empleado">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="id_ruta" value= "{{venta.id_ruta}}" class="form-control" placeholder="Id Ruta">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar nueva Venta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
